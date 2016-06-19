@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../angular.min.js"></script>
+    <script src="../app.js"></script>
+    <script src="../factory/factory.js"></script>
+    <script src="../controller/controller.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="rctrl">
+<input type="text" ng-model="sp"><button ng-click="x()">Click</button>
+<div ng-controller="c1" >
+    root scope value in c1 directive is{{result}}
+</div>
+
+<div ng-controller="c2">
+
+    root scope value in c2 directive is{{result}}
+</div>
+
+</body>
+</html>

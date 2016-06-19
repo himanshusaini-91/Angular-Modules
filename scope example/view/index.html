@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dependent%20js/angular.min.js"></script>
+    <script src="../app.js"></script>
+    <script src="../factory/factory.js"></script>
+    <script src="../controller/controller.js"></script>
+
+
+
+</head>
+<body ng-app="myApp">
+<div ng-controller="ctrl">
+    <input type="text" ng-init="firstno=0" placeholder="enter first no" ng-model="firstno"/>
+    <input type="text" ng-init="second=0" placeholder="enter second no" ng-model="second"/>
+    <button ng-click="add()">Add</button>
+    <button ng-click="sub()">Substract</button>
+    <button ng-click="mul()">multiply</button>
+    <button ng-click="div()">divide</button>
+<div ng-bind="result"></div>
+</div>
+
+</body>
+</html>

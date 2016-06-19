@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="factory/factory.js"></script>
+    <script src="controller/controller.js"></script>
+
+</head>
+<body ng-app="myapp">
+<div>
+    header
+</div>
+<div><ng-view></ng-view></div>
+<div> Footer
+    <a ng-href="#/home">home</a>
+    <a ng-href="#/about">about</a>
+    <a ng-href="#/contact">contact</a>
+    <a ng-href="#/payment/20000">payment</a>
+
+</div>
+</body>
+</html>

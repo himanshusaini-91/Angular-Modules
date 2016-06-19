@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home Page</title>
+    <script src="../angular/angular/angular.min.js"></script>
+    <script src="../angular/angular-route/angular-route.js"></script>
+    <script src="../app.js"></script>
+    <script src="../controller/home.js"></script>
+    <script src="../controller/first.js"></script>
+    <script src="../controller/second.js"></script>
+</head>
+<body ng-app="My" ng-controller="HomeController">
+<table style="width:100%;">
+    <tr>
+        <td><a ng-click="fnGoToPage('ist');">First Page</a></td>
+        <td><a ng-click="fnGoToPage('2nd');">Second Page</a></td>
+    </tr>
+</table>
+<div class="pgHolder" ng-view>
+</div>
+</body>
+</html>
