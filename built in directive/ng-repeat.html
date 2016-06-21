@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js">S</script>
+    <script>
+        var app=angular.module("myapp",[]);
+        app.controller("ctrl",["$scope",function($scope)
+
+            {
+           $scope.data=["amit","raj","rohit","suman"];
+            }
+
+
+        ]);
+    </script>
+</head>
+<body ng-app="myapp" ng-controller="ctrl">
+<div ng-repeat="object in data">
+
+    {{object}}
+</div>
+</body>
+</html>
