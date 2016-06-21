@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- www.techstrikers.com -->
+    <title>ngClassEven Test Sample</title>
+    <style>
+        .odd {
+            color: red;
+        }
+        .even {
+            color: black;
+        }
+    </style>
+
+    <script src="angular.min.js"></script>
+
+    <script>
+        var app = angular.module('EvenExample', [])
+        app.controller('EvenController', ['$scope', function($scope) {
+            $scope.names = ['Red', 'Blue', 'Green','Yellow','White','Black'];
+            $scope.favorite = { color: 'Green' };
+        }]);
+    </script>
+</head>
+<body style="background-color:#DDE4E9;" ng-app="EvenExample">
+<fieldset style="background-color:#DDE4E9;">
+    <legend>AngulerJS ngClassEven Example</legend>
+    <div ng-controller="EvenController">
+        <form name="myform">
+            <label ng-repeat="name in names" for="name">
+     <!-- <span id="{{name}}" ng-class-odd="'odd'" ng-class-even="'even'">
+       {{name}}-->
+                <span ng-class-odd="'odd'" ng-class-even="'even'">
+                <input type="radio" ng-model="favorite.color" ng-value="name"
+                       id="name" name="color"> {{name}}
+                </span>
+            </label>
+        </form>
+    </div>
+</fieldset>
+</body>
+</html>

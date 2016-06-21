@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- www.techstrikers.com -->
+    <title>ngCut Test Sample</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+</head>
+<body style="background-color:#DDE4E9;" ng-app="">
+<fieldset style="background-color:#DDE4E9;">
+    <legend>AngulerJS ngCut Example</legend>
+
+    <input ng-cut="cut=true" ng-init="cut=false; value='cut text from here'"
+           ng-model="value">
+    <p style="font-family:Arial;color:red;background:steelblue;padding:3px;width:350px;"
+       ng-show='cut'>Text cut</p>
+
+    <input ng-copy="copy=true" ng-init="paste=false" placeholder='Copy here'>
+    <p style="font-family:Arial;color:yellow;background:steelblue;padding:3px;width:350px;"
+       ng-show='copy'>Text COpy</p>
+
+        <input ng-paste="paste=true" ng-init="paste=false" placeholder='paste here'>
+        <p style="font-family:Arial;color:orange;background:steelblue;padding:3px;width:350px;"
+           ng-show='paste'>Text pasted</p>
+
+
+</fieldset>
+</body>
+</html>
