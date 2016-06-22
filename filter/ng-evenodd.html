@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+    <style>
+        .odd{
+        background-color:blue;
+        color:red;
+        }
+        .even
+        {
+        background-color:black;
+        color:blue;
+        }
+    </style>
+    <script>
+        var app=angular.module('myapp',[]);
+        app.controller("ctrl",["$scope",function($scope)
+
+        {
+            $scope.x=function()
+            {
+                $scope.data=["red","blue","green","grey","black","yellow"];
+                return  $scope.data;
+            }
+
+        }
+        ]);
+    </script>
+</head>
+<body ng-app="myapp" ng-controller="ctrl">
+
+<div ng-repeat="names in x()">
+    <!--{{names}}-->
+    <p ng-class-odd="'odd'" ng-class-even="'even'">
+        {{names}}
+    </p>
+</div>
+
+</body>
+</html>

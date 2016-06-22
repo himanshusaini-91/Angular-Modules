@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+    <script>
+        var app=angular.module('myapp',[]);
+        app.controller("ctrl",["$scope",function($scope)
+
+        { $scope.student={
+            firstname:"HIMANSHU",
+            lastname:"SAINI",
+            fees:500,
+            fullname:function()
+            {
+
+                var name=$scope.student;
+                return name.firstname+' '+ name.lastname;
+            }
+
+
+        }
+
+        }
+        ]);
+    </script>
+</head>
+<body ng-app="myapp" ng-controller="ctrl">
+
+<input type="text" ng-model="student.fees">
+<h1>currency are: {{ student.fees | currency:"Rs" }}</h1>
+
+
+</body>
+</html>

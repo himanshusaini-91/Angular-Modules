@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+    <script>
+        var app=angular.module('myapp',[]);
+        app.controller("ctrl",["$scope",function($scope)
+
+        { $scope.student={
+            firstname:"Himanshu",
+            lastname:"saini",
+            fullname:function()
+            {
+                alert("i am in full");
+                var name=$scope.student;
+                return name.firstname+' '+ name.lastname;
+            },
+            subjects:[
+                {name:'Physics',marks:70},
+                {name:'Chemistry',marks:80},
+                {name:'Math',marks:65}
+            ]
+
+        }
+
+        }
+        ]);
+    </script>
+</head>
+<body ng-app="myapp" ng-controller="ctrl">
+<input type="text" ng-model="student.firstname">
+<input type="text" ng-model="student.lastname">
+<h1 ng-repeat = "subject in student.subjects | filter: subjectName |orderBy:'marks'">
+{{ subject.name + ', marks:' + subject.marks }}</h1>
+
+
+
+</body>
+</html>
