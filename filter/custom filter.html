@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+    <script>
+        var app=angular.module('myapp',[]);
+        app.filter("customfilter",function()
+
+        {
+            return function(input)
+            {
+                return input[0].toUpperCase() + input.slice(1);
+            }
+        }
+
+        )
+    </script>
+</head>
+<body ng-app="myapp">
+
+<h1>String through custom directivee are: {{"angular " | lowercase | customfilter}}</h1>
+
+
+</body>
+</html>
